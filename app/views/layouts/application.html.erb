@@ -2,13 +2,34 @@
 <html>
   <head>
     <title>Blog</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
   </head>
 
   <body>
+    <header>
+      <nav class="be-red white large-padding">
+        <ul class="no-list row center-xs middle-xs">
+          <li>
+            <h1 class="no-margin" id="logo">Logo</h1>
+          </li>
+          <li class="col-md">
+            <%= link_to "Inicio", root_path %>
+          </li>
+          <li class="col-md">
+            <%= link_to "Diseño", root_path %>
+          </li>
+          <li class="col-md">
+            <%= link_to "Programación", root_path %>
+          </li>
+          <li class="col-md">
+            <%= link_to "Tecnología", root_path %>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <%= yield %>
   </body>
 </html>
